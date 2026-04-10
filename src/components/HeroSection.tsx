@@ -45,7 +45,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-[100svh] lg:h-[100svh] relative overflow-hidden flex flex-col border-b-2 border-foreground"
+      className="h-auto lg:h-[100svh] relative overflow-hidden flex flex-col border-b-2 border-foreground"
     >
       {/* Layer 1: Background Typography */}
       <div
@@ -76,7 +76,7 @@ const HeroSection = () => {
       </div>
 
       {/* Layer 2 & 3: Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-stretch lg:h-full pt-14 sm:pt-16 md:pt-20 lg:pt-20">
+      <div className="relative z-10 flex flex-col lg:flex-row items-stretch h-auto lg:h-full pt-14 sm:pt-16 md:pt-20 lg:pt-20">
         {/* Left — Typography */}
         <div className="flex-1 lg:flex-none lg:w-1/2 lg:h-full flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-14 xl:px-16 py-6 sm:py-10 md:py-8 lg:py-0 text-center lg:text-left">
           <motion.p
@@ -137,7 +137,7 @@ const HeroSection = () => {
             <img
               src={heroImg}
               alt="Yugang Baghel"
-              className="w-full h-full object-cover object-[center_18%] sm:object-center relative z-10"
+              className="w-full h-full object-contain sm:object-cover object-bottom sm:object-center translate-y-0 sm:translate-y-0 relative z-10"
             />
           </motion.div>
         </div>
