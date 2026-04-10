@@ -32,7 +32,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-0 left-0 w-full z-[9990] px-4 sm:px-6 md:px-12 py-4 md:py-5 flex justify-between items-center mix-blend-normal md:mix-blend-difference"
+      className="fixed top-0 left-0 w-full z-[9990] px-4 sm:px-6 md:px-8 lg:px-12 py-4 md:py-5 flex justify-between items-center mix-blend-normal lg:mix-blend-difference"
     >
       <Magnetic strength={0.15}>
         <button
@@ -43,17 +43,17 @@ const Navbar = () => {
           <img
             src={yugLogo}
             alt="YUG logo"
-            className="h-8 sm:h-9 md:h-10 w-auto object-contain"
+            className="h-8 sm:h-9 md:h-9 lg:h-10 w-auto object-contain"
           />
         </button>
       </Magnetic>
 
-      <div className="hidden md:flex gap-8 md:gap-12">
+      <div className="hidden lg:flex gap-6 xl:gap-10">
         {links.map((link) => (
           <Magnetic key={link.id} strength={0.15}>
             <button
               onClick={() => handleNavClick(link.id)}
-              className="text-white text-xs md:text-sm font-bold tracking-[0.2em] uppercase opacity-60 hover:opacity-100 transition-opacity"
+              className="text-white text-xs xl:text-sm font-bold tracking-[0.18em] xl:tracking-[0.2em] uppercase opacity-60 hover:opacity-100 transition-opacity"
             >
               {link.label}
             </button>
@@ -64,7 +64,7 @@ const Navbar = () => {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="md:hidden inline-flex items-center justify-center h-10 w-10 border border-foreground/60 bg-white text-foreground"
+        className="lg:hidden inline-flex items-center justify-center h-10 w-10 border border-foreground/60 bg-white text-foreground"
         aria-label="Toggle navigation menu"
       >
         <AnimatePresence mode="wait" initial={false}>
@@ -101,7 +101,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-4 right-4 mt-2 md:hidden bg-white text-foreground border-2 border-foreground mix-blend-normal shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
+            className="absolute top-full left-4 right-4 mt-2 lg:hidden bg-white text-foreground border-2 border-foreground mix-blend-normal shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
           >
             <div className="flex flex-col py-2">
               {links.map((link) => (

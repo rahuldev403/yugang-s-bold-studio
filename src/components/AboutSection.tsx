@@ -4,9 +4,9 @@ import { MapPin, Mail } from "lucide-react";
 const AboutSection = () => (
   <section
     id="about"
-    className="px-6 md:px-12 py-24 md:py-36 border-b-2 border-foreground"
+    className="px-6 md:px-10 lg:px-12 py-20 md:py-24 lg:py-32 border-b-2 border-foreground"
   >
-    <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+    <div className="max-w-[1400px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20">
       {/* Left */}
       <div>
         <motion.h2
@@ -14,7 +14,7 @@ const AboutSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-[-0.05em] mb-10"
+          className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-[-0.05em] mb-8 md:mb-10"
         >
           ABOUT
           <br />
@@ -45,7 +45,7 @@ const AboutSection = () => (
         className="relative"
       >
         {/* Portrait placeholder */}
-        <div className="w-[82%] md:w-[72%] aspect-[3/4] bg-secondary border-2 border-foreground mb-6 overflow-hidden flex items-center justify-center">
+        <div className="w-[86%] md:w-[76%] xl:w-[72%] aspect-[3/4] bg-secondary border-2 border-foreground mb-6 overflow-hidden flex items-center justify-center">
           <img
             src="/about-hero.jpeg"
             alt="Yugang portrait"
@@ -54,7 +54,7 @@ const AboutSection = () => (
         </div>
 
         {/* Info card overlapping */}
-        <div className="lg:absolute lg:bottom-0 lg:right-0 lg:translate-x-4 lg:translate-y-4 bg-background border-2 border-foreground p-6 md:p-8 max-w-sm">
+        <div className="xl:absolute xl:bottom-0 xl:right-0 xl:translate-x-4 xl:translate-y-4 bg-background border-2 border-foreground p-6 md:p-8 max-w-sm">
           <div className="flex items-center gap-2 text-muted-foreground text-xs tracking-[0.2em] uppercase mb-3">
             <MapPin size={14} />
             Bengalore

@@ -24,34 +24,18 @@ const projects = [
     num: "02",
     title: "Fintech App",
     subtitle: "UI/UX",
+    href: "https://www.figma.com/proto/Xw314fdIrS1tAxO8DAB80j/thumb?node-id=1-2&p=f&t=ZnSSwCMmR4Pnrtlb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     bg: "bg-foreground",
     shape: (
-      <div className="w-36 h-20 md:w-52 md:h-28 bg-primary transition-transform duration-500 group-hover:scale-125" />
-    ),
-    size: "small",
-  },
-  {
-    num: "03",
-    title: "Urban Magazine",
-    subtitle: "Editorial",
-    bg: "bg-secondary",
-    shape: (
-      <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden transition-transform duration-500 group-hover:scale-125">
-        <div className="w-full h-1/2 bg-foreground" />
-        <div className="w-full h-1/2 bg-primary" />
+      <div className="w-full h-full overflow-hidden">
+        <img
+          src="/thumbnail.jpeg"
+          alt="Thumbnail project preview"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
       </div>
     ),
     size: "small",
-  },
-  {
-    num: "04",
-    title: "Festival",
-    subtitle: "Art Direction",
-    bg: "bg-primary",
-    shape: (
-      <div className="w-32 h-32 md:w-44 md:h-44 border-[3px] border-background rotate-45 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-[55deg]" />
-    ),
-    size: "large",
   },
 ];
 
@@ -105,8 +89,8 @@ const ProjectCard = ({
           <div
             className={`${project.bg} ${
               project.size === "large"
-                ? "h-[400px] md:h-[550px]"
-                : "h-[300px] md:h-[420px]"
+                ? "h-[380px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+                : "h-[280px] md:h-[340px] lg:h-[380px] xl:h-[420px]"
             } flex items-center justify-center overflow-hidden relative`}
           >
             <motion.div style={{ y: shapeY }}>{project.shape}</motion.div>
@@ -152,7 +136,7 @@ const WorkSection = () => {
   return (
     <section
       id="work"
-      className="px-4 md:px-8 lg:px-12 py-24 md:py-36 border-b-2 border-foreground"
+      className="px-4 md:px-8 lg:px-12 py-20 md:py-24 lg:py-32 border-b-2 border-foreground"
     >
       <div className="max-w-[1400px] mx-auto">
         <motion.h2
@@ -160,7 +144,7 @@ const WorkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-[-0.05em] mb-16 md:mb-24"
+          className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-[-0.05em] mb-14 md:mb-20 xl:mb-24"
         >
           SELECTED
           <br />
@@ -171,6 +155,17 @@ const WorkSection = () => {
             <ProjectCard key={i} project={p} index={i} />
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 md:mt-14 text-center text-[11px] sm:text-xs uppercase tracking-[0.28em] text-muted-foreground"
+        >
+          More case studies are in the works. Stay tuned, the next drop is going
+          to be loud.
+        </motion.p>
       </div>
     </section>
   );

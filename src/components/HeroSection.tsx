@@ -45,7 +45,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="h-[100svh] relative overflow-hidden flex flex-col border-b-2 border-foreground"
+      className="min-h-[100svh] lg:h-[100svh] relative overflow-hidden flex flex-col border-b-2 border-foreground"
     >
       {/* Layer 1: Background Typography */}
       <div
@@ -76,9 +76,9 @@ const HeroSection = () => {
       </div>
 
       {/* Layer 2 & 3: Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-stretch h-full pt-14 sm:pt-16 lg:pt-20">
+      <div className="relative z-10 flex flex-col lg:flex-row items-stretch lg:h-full pt-14 sm:pt-16 md:pt-20 lg:pt-20">
         {/* Left — Typography */}
-        <div className="flex-1 lg:flex-none lg:w-1/2 lg:h-full flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-6 sm:py-10 lg:py-0 text-center lg:text-left">
+        <div className="flex-1 lg:flex-none lg:w-1/2 lg:h-full flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-14 xl:px-16 py-6 sm:py-10 md:py-8 lg:py-0 text-center lg:text-left">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
             Multidisciplinary Designer
           </motion.p>
 
-          <h1 className="text-[clamp(2.4rem,16vw,13rem)] font-bold leading-[0.85] tracking-[-0.05em]">
+          <h1 className="text-[clamp(2.4rem,16vw,5rem)] md:text-[clamp(3.2rem,10vw,7.2rem)] xl:text-[clamp(3.8rem,11vw,13rem)] font-bold leading-[0.85] tracking-[-0.05em]">
             <AnimatedWord word="YUGANG" />
             <br />
             <AnimatedWord word="BAGHEL" offset={6} outlined />
@@ -126,7 +126,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right — Portrait */}
-        <div className="w-full lg:w-1/2 lg:flex-none relative h-[36svh] sm:h-[48svh] lg:h-full overflow-hidden">
+        <div className="w-full lg:w-1/2 lg:flex-none relative h-[36svh] sm:h-[48svh] md:h-[52svh] lg:h-full overflow-hidden">
           {/* Portrait */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
